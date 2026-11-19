@@ -1,7 +1,7 @@
 # S Lineage Realtors Blog
 
 Auto-provisioned blog for **S Lineage Realtors**, served via GitHub Pages at
-<https://agentgrowio.github.io/facebook/>.
+<https://agentgrowio.github.io/slineagerealtors/>.
 
 ## How it works
 
@@ -32,6 +32,6 @@ publish via `publish.sh`.
 
 ## Canonical URLs
 
-`BLOG_BASE` (set by `publish.sh`) is `https://agentgrowio.github.io/facebook`.
+`BLOG_BASE` (set by `publish.sh`) is `https://agentgrowio.github.io/slineagerealtors`.
 Asset links in pages are **relative**, so the site is robust to the project-
 pages subpath.

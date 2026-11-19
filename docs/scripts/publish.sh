@@ -11,7 +11,7 @@
 #
 # BLOG_BASE is the repo's GitHub Pages origin and is exported so
 # regenerate_indexes.py + submit_indexing.py emit the correct canonical URLs.
-# The provisioner renders the facebook placeholder below per client.
+# The provisioner renders the slug placeholder below per client.
 # =============================================================================
 
 set -euo pipefail
@@ -19,7 +19,7 @@ REPO_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_DIR"
 
 PYTHON="${PYTHON:-python3}"
-export BLOG_BASE="${BLOG_BASE:-https://agentgrowio.github.io/facebook}"
+export BLOG_BASE="${BLOG_BASE:-https://agentgrowio.github.io/slineagerealtors}"
 
 COMMIT_MSG="${1:-Auto-publish blog update}"
 shift 2>/dev/null || true
