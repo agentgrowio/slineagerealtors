@@ -1,6 +1,7 @@
-/* Uzonova blog — premium theme, palette matched to uzonova.com
+/* S Lineage Realtors blog (template theme from the AgentGrow seed; brand overrides at the end of this file)
    navy #0F172A/#07152C · azure #1E9DF1 · gradient #3C83F6→#06B5D0 · Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
 
 :root {
   --navy:#0F172A; --navy-2:#111827; --navy-deep:#07152C; --black:#000;
@@ -178,3 +179,25 @@ section{padding:4rem 0}
 
 .site-footer{background:#071a1c}
 .site-footer .logo .dot{background:#b7791f}
+
+/* ── S Lineage Realtors brand: palette + post typography (matches css/home.css) ── */
+:root{
+  --navy:#0c2b2e; --navy-2:#12393c; --navy-deep:#071a1c; --ink:#13221f;
+  --azure:#9a6417; --blue:#0c2b2e; --cyan:#e2b26a;
+  --grad:linear-gradient(90deg,#b7791f,#d9a54a);
+  --grad-hero:radial-gradient(900px 420px at 85% -10%,rgba(183,121,31,.22),transparent 60%),linear-gradient(160deg,#0c2b2e 0%,#0a2224 60%,#071a1c 100%);
+}
+.article-header h1,.article-body h2,.related-posts h2{font-family:'Fraunces',Georgia,serif;font-weight:700;letter-spacing:-.01em}
+.article-header h1{line-height:1.15}
+.article-header .breadcrumb a{color:#e2b26a}
+.article-body{color:#3d4b48}
+.article-body blockquote{border-left:4px solid #b7791f;background:#faf6ef;font-family:'Fraunces',Georgia,serif;font-size:1.2rem;color:#13221f}
+.article-body a{color:#9a6417}
+.badge-strategy{background:rgba(183,121,31,.14);color:#9a6417}
+.post-cta{margin:2.5rem 0 1rem;padding:1.6rem 1.75rem;border-radius:16px;background:#0c2b2e;color:#c9d6d2;border-top:4px solid #b7791f}
+.post-cta h3{font-family:'Fraunces',Georgia,serif;color:#fff;font-size:1.35rem;margin:0 0 .4rem}
+.post-cta p{margin:0 0 1rem;color:#c9d6d2}
+.post-cta .row{display:flex;flex-wrap:wrap;gap:.6rem}
+.post-cta a{display:inline-block;padding:.75rem 1.2rem;border-radius:999px;font-weight:700;text-decoration:none}
+.post-cta a.wa{background:#128c4a;color:#fff}.post-cta a.wa:hover{background:#0f7a40;color:#fff}
+.post-cta a.call{background:#fff;color:#0c2b2e}.post-cta a.call:hover{background:#faf6ef;color:#0c2b2e}

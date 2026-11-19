@@ -171,3 +171,6 @@ body.home { background: #fff; color: var(--sl-body); font-size: 1.0625rem; }
 }
 .home .site-footer a { color: var(--gray-300); }
 .home .site-footer a:hover { color: #fff; }
+.h-blog .blog-featured { display: none; }
+.h-blog .container { max-width: 1140px; }
+.h-blog .filters { margin-top: 1.5rem; }

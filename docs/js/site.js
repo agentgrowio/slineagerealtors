@@ -96,6 +96,12 @@
       btn.addEventListener('click', function () { var s = document.getElementById('featured-scroller'); if (!s) return; s.scrollBy({ left: (btn.dataset.scroll === 'next' ? 1 : -1) * Math.min(s.clientWidth * .9, 720), behavior: 'smooth' }); });
     });
     var y = document.getElementById('yr'); if (y) y.textContent = new Date().getFullYear();
+    var faq = inPosts && document.querySelector('.article-body #faq');
+    if (faq && !document.querySelector('.post-cta')) faq.insertAdjacentHTML('beforebegin',
+      '<aside class="post-cta"><h3>See The Omaxe State with me</h3>' +
+      '<p>A free site visit and a line-by-line walkthrough of the official cost sheet, in English or Hindi.</p>' +
+      '<div class="row"><a class="wa" href="' + WA + '" rel="noopener">WhatsApp Manoj</a>' +
+      '<a class="call" href="tel:' + PHONE + '">Call ' + PHONE_H + '</a></div></aside>');
   }
   function init() {
     mount('site-header', header(), 'afterbegin');
