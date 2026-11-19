@@ -8,7 +8,15 @@
   var inPosts = location.pathname.indexOf('/posts/') !== -1;
   var base = inPosts ? '../' : '';
   var file = (location.pathname.split('/').pop() || 'index.html');
-  var nav = [{ label: 'Blog', href: base + 'index.html', match: ['', 'index.html'] }];
+  var PHONE = '+919810504326', PHONE_H = '+91 98105 04326';
+  var WA = 'https://wa.me/919810504326?text=' + encodeURIComponent('Hello Manoj ji, I would like to know more about The Omaxe State, Dwarka.');
+  var nav = [
+    { label: 'Home', href: base + 'index.html', match: ['', 'index.html'] },
+    { label: 'The project', href: base + 'index.html#project', match: [] },
+    { label: 'How it works', href: base + 'index.html#how', match: [] },
+    { label: 'FAQ', href: base + 'index.html#faq', match: [] },
+    { label: 'Blog', href: base + 'index.html#blog', match: [] }
+  ];
   var BADGE = { 'Platform': 'badge-platform', 'Getting Started': 'badge-getting-started', 'How-To': 'badge-how-to', 'Strategy': 'badge-strategy' };
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
   function active(m) { return m.indexOf(file) !== -1; }
@@ -18,12 +26,20 @@
     return '<header class="site-header"><div class="inner">' +
       '<a class="logo" href="' + base + 'index.html"><span class="dot"></span>' + esc(BRAND) + '</a>' +
       '<button class="nav-toggle" aria-label="Menu">&#9776;</button>' +
-      '<nav id="site-nav">' + links + '</nav></div></header>';
+      '<nav id="site-nav">' + links + '<a class="nav-cta" href="' + WA + '" rel="noopener">WhatsApp</a></nav></div></header>';
   }
   function footer() {
     return '<footer class="site-footer"><div class="inner">' +
       '<div><div class="logo"><span class="dot"></span>' + esc(BRAND) + '</div><p>' + esc(TAGLINE) + '</p></div>' +
-      '<div><h4>Explore</h4><ul><li><a href="' + base + 'index.html">Blog</a></li></ul></div>' +
+      '<div><h4>Contact</h4><ul class="contact"><li><a href="tel:' + PHONE + '">' + PHONE_H + '</a></li>' +
+        '<li><a href="' + WA + '" rel="noopener">WhatsApp</a></li><li>Sector 19B, Dwarka, New Delhi 110075</li>' +
+        '<li><a href="https://www.facebook.com/profile.php?id=61582064513569" rel="noopener">Facebook</a></li></ul></div>' +
+      '<div><h4>Explore</h4><ul><li><a href="' + base + 'index.html#project">The Omaxe State</a></li>' +
+        '<li><a href="' + base + 'index.html#faq">FAQ</a></li><li><a href="' + base + 'index.html#blog">Blog</a></li></ul></div>' +
+      '<p class="disclosure">S Lineage Realtors (Manoj Sachdeva) is an authorised channel partner for The Omaxe State and is not Omaxe Ltd or the DDA. ' +
+        'Project facts come from the developer\'s launch coverage and the project\'s Delhi RERA registration (DLRERA2024P0003). ' +
+        'Prices, availability, rental terms and timelines are as per the current official cost sheet, Omaxe\'s agreement and the RERA registration. ' +
+        'This site is information, not an offer, and not tax or legal advice.</p>' +
       '<div class="copy">&copy; <span id="yr"></span> ' + esc(BRAND) + '. All rights reserved.</div>' +
       '</div></footer>';
   }

@@ -167,3 +167,14 @@ section{padding:4rem 0}
   .site-footer .inner{grid-template-columns:1fr 1fr}
 }
 @media (max-width:520px){.site-footer .inner{grid-template-columns:1fr}.scroller .card{flex-basis:82vw}}
+
+/* S Lineage Realtors brand accents for the shared chrome (all pages) */
+.site-header { background: rgba(12, 43, 46, .92); }
+.site-header .logo .dot { background: #b7791f; box-shadow: 0 0 10px rgba(183, 121, 31, .6); }
+.site-header nav a.nav-cta { background: #128c4a; color: #fff; font-weight: 600; }
+.site-header nav a.nav-cta:hover { background: #0f7a40; color: #fff; }
+.site-footer .disclosure { grid-column: 1 / -1; font-size: .85rem; color: var(--gray-400); line-height: 1.6; max-width: 70ch; }
+.site-footer .contact li { color: var(--gray-300); }
+
+.site-footer{background:#071a1c}
+.site-footer .logo .dot{background:#b7791f}
